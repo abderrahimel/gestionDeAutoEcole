@@ -1,0 +1,51 @@
+<div class="wrap-table100">
+  <div class="table-header">
+    <div class="row">
+      <div class="col-9">
+        <div class="title">
+          <form>
+            <input class="form-control srch" id="demo" type="text" placeholder="Rechercher ici...">
+          </form>
+    
+        </div>
+      </div>
+      <div class="col-3 add-btn-div">
+        <button class="btn btn-primary add-btn" routerLink="/candidat_form">
+          <i class="fa fa-plus"></i>{{ "Nouveau candidat" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="tableDiv">
+    <table id="sailorTable" class="table table-light table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">{{ "CIN" | translate }}</th>
+          <th scope="col">{{ "N° National" | translate }}</th>
+          <th scope="col">{{ "Nom & Prénom" | translate }}</th>
+          <th scope="col">{{ "Téléphone" | translate }}</th>
+          <th scope="col">{{ "Plus d'informations" | translate }}</th>
+          <th scope="col">{{ "Opérations" | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color: black;">{{ message }}test</td>
+        </tr>
+        <tr *ngFor="let mydata of data">
+          <td>{{mydata.CIN}}</td>
+          <td>{{mydata.email}}</td>
+          <td>{{mydata.nom}}</td>
+          <td>{{mydata.telephone}}</td>
+          <td>{{mydata.connaissance}}</td>
+
+          <td>
+            <button class="btn btn-danger">
+              <i class="fa fa-trash"></i>
+            </button>
+            <button class="btn btn-primary">
+              <i class="fa fa-edit"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
